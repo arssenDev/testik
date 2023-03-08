@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+:root {
+    /* Colors */
+    --brand-color: #ff0000;
+    --black: hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
+    /* Fonts */
+    --font-title: "Montserrat", sans-serif;
+    --font-text: "Lato", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h2,
+p {
+    margin: 0;
+}
+
+body {
+    height: 100%;
+
+}
+
+.card__title {
+    font-size: 28px;
+    font-family: var(--font-title);
+    color: var(--white);
+    line-height: 1.1;
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+.card__description {
+    font-family: var(--font-text);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--white);
+    padding: 30px 2px 20px;
+}
+
+
+.cards__books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-out;
+    transform-origin: center center;
+    position: relative;
+    top: 100px;
+}
+
+/* CARD COMPONENT */
+
+.card-textbooks {
+    display: grid;
+    place-items: center;
+    width: 320px;
+    margin: 50px 85px;
+    border-radius: 5px;
+    position: relative;
+    top: 100px;
+    height: 520px;
+    transition: transform 0.5s ease-out;
+    transform-origin: center center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.text-books {
+    padding-bottom: 50px;
+}
+
+.card__background {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px
+}
+
+.card__content {
+    --flow-space: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+    height: 55%;
+    padding: 8% 1.25rem 1.875rem;
+}
+
+.card__content--container {
+    --flow-space: 1.25rem;
+}
+
+
+.card__title::after {
+    content: "";
+    position: absolute;
+    height: 0.3125rem;
+    width: calc(100% + 1.25rem);
+    bottom: calc((1.25rem - 0.5rem) * -1);
+    left: -1.25rem;
+    background-color: var(--brand-color);
+}
+
+.card__button {
+    padding: 0.75em 1.6em;
+    width: fit-content;
+    width: -moz-fit-content;
+    font-variant: small-caps;
+    font-weight: bold;
+    border-radius: 0.45em;
+    border: none;
+    background-color: var(--brand-color);
+    font-family: var(--font-title);
+    font-size: 1.125rem;
+    color: var(--black);
+}
+
+.card__button:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: -5px;
+}

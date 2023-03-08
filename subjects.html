@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Предметы</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="textbooks.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="full__page">
+            <ul>
+                <li>
+                    <div href="#" class="logo__block">
+                        <a href="#" class="logo"><img src="/img/Logo.png" alt=""></a>
+                    </div>
+
+                </li>
+
+                <div id="openBurger" class="header__burger">
+                    <span></span>
+                </div>
+                <div class="menu__nav">
+                    <div class="menu__right">
+                        <li><a class="nav__link" href="QuizWiz.html">Главная страница</a></li>
+                        <li><a class="nav__link" href="#">Предметы</a></li>
+                        <li><a class="nav__link" href="Test.html">Тесты</a></li>
+                        <li><a class="nav__link" id="openContact" href="#">Контакты</a></li>
+                        <li><a class="nav__link registration" href="#" id="openModal">Войти</a></li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Модальное окно для бургер меню-->
+    <div id="BurgerModal" class="nav_burger">
+        <div class="Burger-menu">
+            <div class="form-burger">
+                <span class="close">&times;</span>
+                <li><a class="nav__link-burger btn-burger" href="QuizWiz.html">Главная страница</a></li>
+                <li><a class="nav__link-burger btn-burger" href="#">Предметы</a></li>
+                <li><a class="nav__link-burger btn-burger" href="Test.html">Тесты</a></li>
+                <li><a class="nav__link-burger open-contact-burger btn-burger" href="#">Контакты</a></li>
+                <li><a class="registration btn-burger" href="#" id="openModal">Войти</a></li>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="myModal" class="modal_nav">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="title-Registr-sign">Вход</h2>
+            <form class="form__holder">
+                <input type="text" class="sign-in" id="username" name="username" placeholder="Имя пользователя"
+                    required>
+                <br><br>
+                <input type="password" class="sign-in" id="password" name="password" placeholder="Пароль" required>
+                <br><br>
+                <input type="submit" class="sign__out" value="Войти">
+                <!-- Кнопка для регистрации -->
+                <button id="openRegisterModal" class="sign__out SignRegistr">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="registerModal" class="modal_nav ">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="title-Registr-sign">Регистрация</h2>
+            <form class="form__holder">
+                <input type="text" class="sign-in" id="registerUsername" name="registerUsername"
+                    placeholder="Имя пользователя" required>
+                <br><br>
+                <input type="email" class="sign-in" id="confirmEmail" name="confirmEmail" placeholder="Email" required>
+                <br><br>
+                <input type="password" class="sign-in" id="registerPassword" name="registerPassword"
+                    placeholder="Пароль" required>
+                <br><br>
+
+                <input type="submit" class="sign__out" value="Зарегистрироваться">
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!-- ----------------------------------------------------------------------------------- -->
+
+
+    <div class="cards__books">
+        <div class="card-textbooks">
+            <div class="text-books">
+                <img class="card__background" src="/img/history-2.jpg" />
+                <div class="card__content">
+                    <div class="card__content--container">
+                        <h2 class="card__title">История</h2>
+                        <p class="card__description">
+                            Учебник по Истории: ключевые даты, события и личности, охватывающие период от
+                            древности до настоящего времени.
+                        </p>
+                    </div>
+                    <button class="card__button">Открыть</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-textbooks">
+            <div class="text-books">
+                <img class="card__background" src="/img/chemistry.gif" />
+                <div class="card__content">
+                    <div class="card__content--container">
+                        <h2 class="card__title">Химия</h2>
+                        <p class="card__description">
+                            Учебник по Химии: основные понятия и законы, классификация веществ, химические
+                            реакции и их механизмы.
+                        </p>
+                    </div>
+                    <button class="card__button">Открыть</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-textbooks">
+            <div class="text-books">
+                <img class="card__background" src="/img/informatika-2.jpg" />
+                <div class="card__content">
+                    <div class="card__content--container">
+                        <h2 class="card__title">Информатика</h2>
+                        <p class="card__description">
+                            Учебник по информатике: полезный гид для изучения программирования и
+                            компьютерных наук.
+                        </p>
+                    </div>
+                    <button class="card__button">Открыть</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-textbooks">
+            <div class="text-books">
+                <img class="card__background" src="/img/Physics-2.jpg" />
+                <div class="card__content">
+                    <div class="card__content--container">
+                        <h2 class="card__title">Физика</h2>
+                        <p class="card__description">
+                            Учебник по физике: от основных законов до сложных концепций,
+                            иллюстрированный примерами и упражнениями.
+                        </p>
+                    </div>
+                    <a href="Physics-textbooks.html"><button class="card__button">Открыть</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="card-textbooks">
+            <div class="text-books">
+                <img class="card__background" src="/img/literature.jpg" />
+                <div class="card__content">
+                    <div class="card__content--container">
+                        <h2 class="card__title">Литература</h2>
+                        <p class="card__description">
+                            Учебник по литературе - книга, содержащая теорию и практику чтения и анализа литературных
+                            произведений.
+                        </p>
+                    </div>
+                    <button class="card__button">Открыть</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-textbooks">
+            <div class="text-books">
+                <img class="card__background" src="/img/SocialStudes.jpg" />
+                <div class="card__content">
+                    <div class="card__content--container">
+                        <h2 class="card__title">Обществознание</h2>
+                        <p class="card__description">
+                            Учебник по обществознанию - наглядный и понятный источник знаний о социальных явлениях и
+                            процессах."
+                        </p>
+                    </div>
+                    <button class="card__button">Открыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

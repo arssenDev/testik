@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZWIZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="full__page">
+            <ul>
+                <li>
+                    <div href="#" class="logo__block">
+                        <a href="#" class="logo"><img src="/img/Logo.png" alt=""></a>
+                    </div>
+
+                </li>
+
+                <div id="openBurger" class="header__burger">
+                    <span></span>
+                </div>
+                <div class="menu__nav">
+                    <div class="menu__right">
+                        <li><a class="nav__link" href="QuizWiz.html">Главная страница</a></li>
+                        <li><a class="nav__link" href="subjects.html">Предметы</a></li>
+                        <li><a class="nav__link" href="Test.html">Тесты</a></li>
+                        <li><a class="nav__link" id="openContact" href="#">Контакты</a></li>
+                        <li><a class="nav__link registration" href="#" id="openModal">Войти</a></li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Модальное окно для бургер меню-->
+    <div id="BurgerModal" class="nav_burger">
+        <div class="Burger-menu">
+            <div class="form-burger">
+                <span class="close">&times;</span>
+                <li><a class="nav__link-burger btn-burger" href="QuizWiz.html">Главная страница</a></li>
+                <li><a class="nav__link-burger btn-burger" href="subjects.html">Предметы</a></li>
+                <li><a class="nav__link-burger btn-burger" href="Test.html">Тесты</a></li>
+                <li><a class="nav__link-burger open-contact-burger btn-burger" href="#">Контакты</a></li>
+                <li><a class="registration btn-burger" href="#" id="openModal">Войти</a></li>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="myModal" class="modal_nav">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="title-Registr-sign">Вход</h2>
+            <form class="form__holder">
+                <input type="text" class="sign-in" id="username" name="username" placeholder="Имя пользователя"
+                    required>
+                <br><br>
+                <input type="password" class="sign-in" id="password" name="password" placeholder="Пароль" required>
+                <br><br>
+                <input type="submit" class="sign__out" value="Войти">
+                <!-- Кнопка для регистрации -->
+                <button id="openRegisterModal" class="sign__out SignRegistr">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="registerModal" class="modal_nav ">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="title-Registr-sign">Регистрация</h2>
+            <form class="form__holder">
+                <input type="text" class="sign-in" id="registerUsername" name="registerUsername"
+                    placeholder="Имя пользователя" required>
+                <br><br>
+                <input type="email" class="sign-in" id="confirmEmail" name="confirmEmail" placeholder="Email" required>
+                <br><br>
+                <input type="password" class="sign-in" id="registerPassword" name="registerPassword"
+                    placeholder="Пароль" required>
+                <br><br>
+
+                <input type="submit" class="sign__out" value="Зарегистрироваться">
+            </form>
+        </div>
+    </div>
+
+
+    <!-- --------------------------------------------------------------------->
+
+    <div class="Quiz" id="quiz">
+        <div id="sequence" class="quiz__block">
+            <div class="quiz__counter-wrap">
+                <div class="quiz__question-counter">
+                    <strong id="question-number"></strong><span id="total-questions">/8</span>
+                </div>
+                <div id="question" class="quiz__question">
+                    <span></span>
+                </div>
+                <div id="answers" class="quiz__options">
+                    <ul>
+                        <li>
+
+                            <div class="quiz__option">
+                                <input type="radio" name="answer" id="a" class=" answers">
+                                <label for="a" id="a_text"></label>
+                            </div>
+                        </li>
+                        <li>
+
+                            <div class="quiz__option">
+                                <input type="radio" name="answer" id="b" class=" answers">
+                                <label for="b" id="b_text"></label>
+                            </div>
+                        </li>
+                        <li>
+
+                            <div class="quiz__option">
+                                <input type="radio" name="answer" id="c" class=" answers">
+                                <label for="c" id="c_text"></label>
+                            </div>
+                        </li>
+                        <li>
+
+                            <div class="quiz__option">
+                                <input type="radio" name="answer" id="d" class=" answers">
+                                <label for="d" id="d_text"></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="quiz__next-button">
+                    <button id="next" class="quiz__Next">Следующий вопрос</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

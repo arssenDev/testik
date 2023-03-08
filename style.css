@@ -1,0 +1,933 @@
+/* Общие стили для всей страницы */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили для body */
+body {
+  text-rendering: optimizeSpeed;
+  background-color: #34363c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Стили для всех элементов и элементов html */
+*,
+html * {
+  scrollbar-width: thin;
+  scrollbar-color: #FFC9C9 #000000;
+  scroll-behavior: smooth;
+}
+
+/* Стили для полосы прокрутки в браузере */
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar {
+  background-color: red;
+  height: 12px;
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  border: 3px solid rgb(0, 0, 0);
+  background-color: red;
+}
+
+
+/* --------------------------------- */
+
+/* Стили для блока, ограничивающего максимальную ширину страницы */
+.full__page {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 10px;
+}
+
+/* Стили для блока навигации */
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: #0000;
+}
+
+.nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #191b22;
+
+}
+
+.nav::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #a8b2d166;
+  position: relative;
+  bottom: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.logo__block {
+  height: 30px;
+}
+
+.logo {
+  z-index: 10;
+  height: 30px;
+}
+
+.logo img {
+  width: 200px;
+  position: relative;
+  bottom: 25px;
+  display: block;
+  height: 80px;
+}
+
+/* Медиазапрос для меньших экранов */
+@media(max-width: 870px) {
+  .menu__nav {
+    bottom: 30px;
+  }
+}
+
+.menu__right {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  margin: 0 auto;
+  top: 7px;
+}
+
+/* /* Стили для ссылок навигации */
+
+.nav__link:hover {
+  color: #ddd;
+
+}
+
+.nav__link_2 {
+  background-color: #000;
+  opacity: 0;
+}
+
+.nav__link_2:hover {
+  color: #ff0000;
+}
+
+.nav ul li ul {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+}
+
+.nav ul li:hover ul li a {
+  opacity: 1;
+  height: 50px;
+  transition: all .3s linear;
+  -o-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+}
+
+.nav ul li ul a {
+  display: block;
+  color: #ffffff;
+  max-width: 150px;
+  font: 700 14px Arial, Helvetica, sans-serif;
+  background: #0e0e0e;
+  padding: 0 5px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.nav ul li {
+  float: left;
+  position: relative;
+}
+
+.nav ul li a {
+  padding: 10px 15px;
+  color: #ff0000;
+  display: block;
+  font: 15px Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.nav ul li a span {
+  color: #ffffff;
+}
+
+
+
+li {
+  list-style-type: none;
+}
+
+.registration {
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.registration:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
+
+.header__burger {
+  display: none;
+}
+
+/* =================================================== */
+@media(max-width: 768px) {
+  .header__burger {
+    display: block;
+    display: flex;
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    right: 10px;
+    background-color: transparent;
+    top: 17px;
+  }
+
+  .header__burger span {
+    position: absolute;
+    background-color: #ff0000;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 15px;
+  }
+
+  .header__burger::before,
+  .header__burger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000;
+  }
+
+  .header__burger::before {
+    top: 0;
+  }
+
+  .header__burger::after {
+    bottom: 0;
+  }
+
+  .menu__nav {
+    position: relative;
+    left: 0;
+    margin-left: 50px;
+    bottom: 20px;
+    transition: all 0.3s ease;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .menu__nav {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .menu__right {
+    display: none;
+  }
+
+  .logo img {
+    position: relative;
+    right: 30px;
+    width: 200px;
+    bottom: 40px;
+  }
+
+  .full__page {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+  }
+
+}
+
+/* <!-- Модальное окно для бургер меню--> */
+.nav_burger {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+.Burger-menu {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ff0000;
+  box-shadow: 0 0 30px #ff0000;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.form-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.form-burger .nav__link-burger {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff0000;
+  text-decoration: none;
+}
+
+
+
+/* Стилизуем пункты меню */
+.form-burger li {
+  margin: 15px 0;
+}
+
+/* --------Стили для модального окна Войти ------------*/
+.modal_nav {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #24262b;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #ff0000;
+  text-align: center;
+  box-shadow: 0 0 30px #ff0000;
+  max-width: 400px;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+.title-Registr-sign {
+  color: #c77575;
+}
+
+.modal-content_2 {
+  background-color: #24262b;
+  color: #a8b2d1;
+  margin: 13% auto;
+  padding: 20px;
+  border: 1px solid #ff0000;
+  box-shadow: 0 0 30px #ff0000;
+  max-width: 700px;
+
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: end;
+}
+
+.conatct-title {
+  text-align: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff0000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sign-in {
+  border: 1px solid #ff0000;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 8px 15px;
+  width: 355px;
+}
+
+.form__holder {
+  overflow: hidden;
+  margin-top: 50px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+.sign__out {
+  border-radius: 5px;
+  padding: 10px;
+  width: 150px;
+}
+
+.sign__out:hover {
+  background-color: #c77575;
+}
+
+#registerModal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+
+#registerModal .modal-content {
+  background-color: #24262b;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #ff0000;
+  text-align: center;
+  box-shadow: 0 0 30px #c77575;
+  max-width: 400px;
+  height: 400px;
+}
+
+@media screen and (max-width:768px) {
+  .modal-content {
+    transform: translate(0, 40%);
+    margin: 27% auto;
+  }
+}
+
+/* ---------------------------------------------------------- */
+/* --------------------Главная страница---------------------- */
+
+
+.greetings {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  top: 250px;
+  padding: 0.1em 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.greetings__title {
+  color: #c94242;
+}
+
+.greetings__description {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+@media screen and (max-width:768px) {
+  .greetings__description {
+    font-size: 20px;
+  }
+}
+
+/* ---------------------------------------------------------- */
+/* --------------------Selecting Tests---------------------- */
+.card {
+  width: 300px;
+  margin: 20px;
+  border-radius: 5px;
+  position: relative;
+  top: 200px;
+  height: 533px;
+  transition: transform 0.5s ease-out;
+  transform-origin: center center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.card-text {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-out;
+  transform-origin: center center;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 300px;
+    margin: 35px 0;
+  }
+}
+
+/* ------Questions------------- */
+
+.Quiz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quiz__block {
+  width: 600px;
+
+}
+
+.quiz__question-counter {
+  position: relative;
+  color: #aaaaaa;
+  display: flex;
+  justify-content: end;
+  right: 10px;
+}
+
+.quiz__question-counter strong {
+  color: #00ff00;
+}
+
+.quiz__question {
+  color: #c77575;
+  border: 1px solid #afb9d666;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center
+}
+
+.quiz__options {
+  position: relative;
+  left: 20px;
+}
+
+.quiz__option {
+  margin: 10px 0px;
+  border: 1px solid #afb9d666;
+  border-radius: 12px;
+  padding: 5px;
+  color: #fff;
+}
+
+h2 {
+  color: #ccc;
+}
+
+.quiz__option label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 10px;
+  height: 40px;
+}
+
+
+.quiz__option input[type="radio"] {
+  display: none;
+}
+
+.quiz__option input[type="radio"]+label::before {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  border: 1px solid #ccc;
+  margin-right: 0.5em;
+  border-radius: 0;
+  pointer-events: none;
+}
+
+.quiz__option input[type="radio"]:checked+label::before {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color: #fff;
+}
+
+.quiz__option input[type="radio"]:hover+label::before {
+  border-color: #ff0000;
+}
+
+
+.quiz__option:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.quiz__next-button {
+  display: flex;
+  justify-content: center;
+}
+
+.quiz__Next {
+  background-color: cornflowerblue;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width:768px) {
+  .quiz__counter-wrap {
+    max-width: 330px;
+  }
+}
+
+
+
+.anime {
+  float: right;
+  width: 200px;
+}
+
+.quiz__result span {
+  color: #00ff00;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  position: relative;
+  top: 180px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  right: 40px;
+}
+
+.footer {
+  padding: 70px 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 150px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+
+.social-links {
+  display: inline-block;
+}
+
+.social a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.social svg {
+  margin-top: 7px;
+  width: 30px;
+  height: 30px;
+}
+
+.gmail :hover {
+  color: #e6ff42;
+}
+
+.github :hover {
+  color: #ff5be9;
+}
+
+.telegram :hover {
+  color: #249bd7;
+}
+
+.VK :hover {
+  color: #4a76a8;
+}
+
+/*responsive*/
+@media screen and (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  #home-anim {
+    width: 100%;
+    height: 170vh;
+  }
+}
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 50%;
+    position: relative;
+    top: 300px;
+  }
+
+}
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+
+  }
+
+}
+
+#home {
+  clip-path: url(#cache);
+}
+
+#home-anim {
+  z-index: -10;
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.3);
+  width: 100%;
+  height: 135vh;
+}
+
+#home-anim__2 {
+  z-index: -10;
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.3);
+  width: 100%;
+  height: 135vh;
+
+}
+
+#red {
+  fill: none;
+  opacity: 0.15;
+  stroke: #CE1B5F;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+}
+
+#blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #24262b;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  animation: draw 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.15;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.15;
+  }
+}
+
+
+
+
+
+
+/* ------------------------------------------------- */
